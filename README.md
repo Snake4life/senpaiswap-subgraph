@@ -1,4 +1,5 @@
-# Uniswap V2 Subgraph
+# Senpai Swap Subgraph
+# Forked from Uniswap v2 Subgraph
 
 [Uniswap](https://uniswap.org/) is a decentralized protocol for automated token exchange on Ethereum.
 
