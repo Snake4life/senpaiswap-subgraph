@@ -8,10 +8,10 @@
     "build": "graph build",
     "create-local": "graph create davekaj/uniswap --node http://127.0.0.1:8020",
     "deploy-local": "graph deploy davekaj/uniswap --debug --ipfs http://localhost:5001 --node http://127.0.0.1:8020",
-    "create:subgraph:rinkeby": "graph create --node https://graph.rinkeby.boba.network:8020 boba/Senpai",
-    "deploy:subgraph:rinkeby": "graph deploy boba/Senpai --ipfs https://graph.rinkeby.boba.network:5001 --node https://graph.rinkeby.boba.network:8020",
-    "create:subgraph:mainnet": "graph create --node https://graph.mainnet.boba.network:8020 boba/Senpaiv0",
-    "deploy:subgraph:mainnet": "graph deploy boba/Senpaiv0 --ipfs https://graph.mainnet.boba.network:5001 --node https://graph.mainnet.boba.network:8020"
+    "create:subgraph:rinkeby": "graph create --node https://graph.rinkeby.boba.network:8020 boba/senpai",
+    "deploy:subgraph:rinkeby": "graph deploy boba/senpai --ipfs https://graph.rinkeby.boba.network:5001 --node https://graph.rinkeby.boba.network:8020",
+    "create:subgraph:mainnet": "graph create --node https://graph.mainnet.boba.network:8020 boba/senpaiv0",
+    "deploy:subgraph:mainnet": "graph deploy boba/senpaiv0 --ipfs https://graph.mainnet.boba.network:5001 --node https://graph.mainnet.boba.network:8020"
   },
   "devDependencies": {
     "@graphprotocol/graph-cli": "^0.16.0",
@@ -22,5 +22,8 @@
     "eslint-config-prettier": "^6.1.0",
     "prettier": "^1.18.2",
     "typescript": "^3.5.2"
+  },
+  "dependencies": {
+    "keytar": "^7.7.0"
   }
 }
