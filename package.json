@@ -6,8 +6,8 @@
   "scripts": {
     "codegen": "graph codegen --output-dir src/types/",
     "build": "graph build",
-    "prepare:rinkeby": "mustache config/rinkeby.json subgraph.template.yaml > subgraph.yaml",
-    "prepare:mainnet": "mustache config/mainnet.json subgraph.template.yaml > subgraph.yaml",
+    "create-local": "graph create davekaj/uniswap --node http://127.0.0.1:8020",
+    "deploy-local": "graph deploy davekaj/uniswap --debug --ipfs http://localhost:5001 --node http://127.0.0.1:8020",
     "create:subgraph:rinkeby": "graph create --node https://graph.rinkeby.boba.network:8020 boba/Senpai",
     "deploy:subgraph:rinkeby": "graph deploy boba/Senpai --ipfs https://graph.rinkeby.boba.network:5001 --node https://graph.rinkeby.boba.network:8020",
     "create:subgraph:mainnet": "graph create --node https://graph.mainnet.boba.network:8020 boba/Senpai",
