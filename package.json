@@ -4,13 +4,14 @@
   "repository": "https://github.com/graphprotocol/uniswap-v2-subgraph",
   "license": "GPL-3.0-or-later",
   "scripts": {
-    "codegen": "graph codegen --output-dir src/types/",
+    "codegen": "graph codegen",
     "build": "graph build",
-    "create-local": "graph create davekaj/uniswap --node http://127.0.0.1:8020",
-    "deploy-local": "graph deploy davekaj/uniswap --debug --ipfs http://localhost:5001 --node http://127.0.0.1:8020",
-    "deploy": "graph deploy ianlapham/uniswap-v2-rinkeby --ipfs https://api.thegraph.com/ipfs/ --node https://api.thegraph.com/deploy/ --debug",
-    "deploy-staging": "graph deploy $THE_GRAPH_GITHUB_USER/$THE_GRAPH_SUBGRAPH_NAME /Uniswap --ipfs https://api.staging.thegraph.com/ipfs/ --node https://api.staging.thegraph.com/deploy/",
-    "watch-local": "graph deploy graphprotocol/Uniswap2 --watch --debug --node http://127.0.0.1:8020/ --ipfs http://localhost:5001"
+    "prepare:rinkeby": "mustache config/rinkeby.json subgraph.template.yaml > subgraph.yaml",
+    "prepare:mainnet": "mustache config/mainnet.json subgraph.template.yaml > subgraph.yaml",
+    "create:subgraph:rinkeby": "graph create --node https://graph.rinkeby.boba.network:8020 boba/Bridges",
+    "deploy:subgraph:rinkeby": "graph deploy boba/Bridges --ipfs https://graph.rinkeby.boba.network:5001 --node https://graph.rinkeby.boba.network:8020",
+    "create:subgraph:mainnet": "graph create --node https://graph.mainnet.boba.network:8020 boba/Bridges",
+    "deploy:subgraph:mainnet": "graph deploy boba/Bridges --ipfs https://graph.mainnet.boba.network:5001 --node https://graph.mainnet.boba.network:8020"
   },
   "devDependencies": {
     "@graphprotocol/graph-cli": "^0.16.0",
