@@ -1,6 +1,6 @@
 specVersion: 0.0.2
 description: SenpaiSwap subgraph
-repository: https://github.com/omgnetwork/optimism
+repository: https://github.com/Snake4life/senpaiswap-subgraph
 schema:
   file: ./schema.graphql
 dataSources:
