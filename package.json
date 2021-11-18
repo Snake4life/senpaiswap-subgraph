@@ -10,8 +10,8 @@
     "deploy-local": "graph deploy davekaj/uniswap --debug --ipfs http://localhost:5001 --node http://127.0.0.1:8020",
     "create:subgraph:rinkeby": "graph create --node https://graph.rinkeby.boba.network:8020 boba/senpai",
     "deploy:subgraph:rinkeby": "graph deploy boba/senpai --ipfs https://graph.rinkeby.boba.network:5001 --node https://graph.rinkeby.boba.network:8020",
-    "create:subgraph:mainnet": "graph create --node https://graph.mainnet.boba.network:8020 boba/senpaiv0",
-    "deploy:subgraph:mainnet": "graph deploy boba/senpaiv0 --ipfs https://graph.mainnet.boba.network:5001 --node https://graph.mainnet.boba.network:8020"
+    "create:subgraph:mainnet": "graph create --node https://graph.mainnet.boba.network:8020 senpaiv1/mainnet",
+    "deploy:subgraph:mainnet": "graph deploy senpaiv1/mainnet --ipfs https://graph.mainnet.boba.network:5001 --node https://graph.mainnet.boba.network:8020"
   },
   "devDependencies": {
     "@graphprotocol/graph-cli": "^0.16.0",
